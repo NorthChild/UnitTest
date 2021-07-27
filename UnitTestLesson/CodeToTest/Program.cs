@@ -2,7 +2,7 @@
 
 namespace CodeToTest
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -12,7 +12,7 @@ namespace CodeToTest
             Console.WriteLine(myGreeting);
         }
 
-        private static string Greeting(int timeOfDay) {
+        public static string Greeting(int timeOfDay) {
 
             string greeting;
 
@@ -20,7 +20,7 @@ namespace CodeToTest
             {
                 greeting = "Good Morning";
             }
-            else if (timeOfDay >= 12 && timeOfDay <= 18)
+            else if (timeOfDay > 12 && timeOfDay <= 18)
             {
 
                 greeting =  "Good afternoon";
