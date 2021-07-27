@@ -16,12 +16,15 @@ namespace UnitTests
         [TestCase(12)]
         public void GivenATimeoBetween5and12Inclusive_Greeting_ReturnsGoodMorning(int time)
         {
+
+            Assert.That(Program.Greeting(time), Is.EqualTo("Good Morning"));
+
             // arrange 
-            var expectedGreeting = "Good Morning";
-            // act
-            var result = Program.Greeting(time);
-            // assert
-            Assert.That(result, Is.EqualTo(expectedGreeting));
+            //var expectedGreeting = "Good Morning";
+            //// act
+            //var result = Program.Greeting(time);
+            //// assert
+            //Assert.That(result, Is.EqualTo(expectedGreeting));
         }
 
 
@@ -30,9 +33,11 @@ namespace UnitTests
         [TestCase(18)]
         public void GivenATimesBetween12and18Included_Greeting_ReturnsGoodAfternoon(int time)
         {
-            var expectedGreeting = "Good afternoon";
-            var result = Program.Greeting(time);
-            Assert.That(result, Is.EqualTo(expectedGreeting));
+            Assert.That(Program.Greeting(time), Is.EqualTo("Good afternoon"));
+
+            //var expectedGreeting = "Good afternoon";
+            //var result = Program.Greeting(time);
+            //Assert.That(result, Is.EqualTo(expectedGreeting));
         }
 
 
@@ -41,9 +46,11 @@ namespace UnitTests
         [TestCase(21)]
         public void GivenATimeoOutsideBoundries_Greeting_ReturnsGoodEvening(int time)
         {
-            var expectedGreeting = "Good evening";
-            var result = Program.Greeting(time);
-            Assert.That(result, Is.EqualTo(expectedGreeting));
+            Assert.That(Program.Greeting(time), Is.EqualTo("Good evening"));
+            
+            //var expectedGreeting = "Good evening";
+            //var result = Program.Greeting(time);
+            //Assert.That(result, Is.EqualTo(expectedGreeting));
         }
 
 
